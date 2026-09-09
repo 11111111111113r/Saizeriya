@@ -1,0 +1,575 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+
+    color: #333;
+    background-color: #fff;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+
+header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 6px solid #008243;
+    border-bottom: 1px solid #ddd;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 8%;
+}
+
+header h1 {
+    color: #d71920;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+header h1::before {
+    content: "🍝 ";
+}
+
+
+/* ナビゲーション */
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+nav a {
+    color: #174b35;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 6px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d71920;
+}
+
+
+/* ナビゲーション下線 */
+
+nav a::after {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #d71920;
+
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   メイン
+========================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================
+   トップページ
+========================= */
+
+#top {
+    min-height: 620px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px 10%;
+
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("images/main.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* 上部イタリアカラー */
+
+#top::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: linear-gradient(
+        to right,
+        #008243 33%,
+        white 33%,
+        white 66%,
+        #d71920 66%
+    );
+}
+
+
+#top h2 {
+    max-width: 750px;
+
+    font-size: 60px;
+    line-height: 1.4;
+
+    margin-bottom: 25px;
+
+    letter-spacing: 4px;
+
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+#top p {
+    max-width: 650px;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =========================
+   共通セクション
+========================= */
+
+section {
+    padding: 90px 10%;
+}
+
+section h2 {
+    color: #075533;
+
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+
+/* 見出し装飾 */
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 4px;
+
+    margin: 15px auto;
+
+    background: linear-gradient(
+        to right,
+        #008243 50%,
+        #d71920 50%
+    );
+}
+
+
+section > p {
+    max-width: 850px;
+
+    margin: 0 auto 20px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   サイゼリヤの魅力
+========================= */
+
+#charm {
+    background-color: #fffdf7;
+}
+
+
+#charm h3 {
+    color: #174b35;
+
+    font-size: 24px;
+
+    margin-top: 50px;
+    margin-bottom: 12px;
+
+    text-align: center;
+}
+
+
+#charm p {
+    max-width: 750px;
+
+    margin: 0 auto 30px;
+
+    text-align: center;
+}
+
+
+/* カードっぽく表示 */
+
+#charm h3,
+#charm h3 + p {
+    position: relative;
+}
+
+
+/* =========================
+   特徴
+========================= */
+
+#feature {
+    background:
+        linear-gradient(
+            rgba(239, 247, 236, 0.95),
+            rgba(239, 247, 236, 0.95)
+        );
+}
+
+
+#feature h3 {
+    max-width: 800px;
+
+    margin: 45px auto 10px;
+
+    padding: 20px 25px;
+
+    border-left: 6px solid #008243;
+
+    background: white;
+
+    color: #174b35;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    border-radius: 8px;
+}
+
+
+#feature p {
+    max-width: 800px;
+
+    margin: 0 auto 25px;
+
+    padding: 0 25px;
+}
+
+
+/* 2番目だけ赤アクセント */
+
+#feature h3:nth-of-type(2) {
+    border-left-color: #d71920;
+}
+
+
+/* =========================
+   企業理念
+========================= */
+
+#philosophy {
+    background-color: #fff;
+
+    position: relative;
+}
+
+
+#philosophy > p {
+    max-width: 850px;
+
+    font-size: 18px;
+
+    line-height: 2;
+}
+
+
+#philosophy h3 {
+    color: #d71920;
+
+    text-align: center;
+
+    font-size: 28px;
+
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+
+/* 企業理念の囲み */
+
+#philosophy h3,
+#philosophy h3 ~ p {
+    max-width: 850px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#philosophy h3 ~ p {
+    background-color: #faf8f0;
+
+    padding: 25px 35px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #008243;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+    background-color: #075533;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    border-top: 6px solid #d71920;
+}
+
+
+footer p {
+    margin: 5px 0;
+
+    font-size: 14px;
+}
+
+
+footer p:last-child {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   スクロール時の余白
+========================= */
+
+#top,
+#charm,
+#feature,
+#philosophy {
+    scroll-margin-top: 100px;
+}
+
+
+/* =========================
+   ホバー効果
+========================= */
+
+#feature h3 {
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+
+#feature h3:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   タブレット対応
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 5%;
+    }
+
+
+    nav ul {
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    #top {
+        min-height: 520px;
+
+        padding: 60px 7%;
+    }
+
+
+    #top h2 {
+        font-size: 45px;
+    }
+
+
+    #top p {
+        font-size: 17px;
+    }
+
+
+    section {
+        padding: 70px 7%;
+    }
+
+}
+
+
+/* =========================
+   スマホ対応
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+
+    nav ul {
+        gap: 12px;
+    }
+
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    #top {
+        min-height: 450px;
+
+        padding: 50px 6%;
+    }
+
+
+    #top h2 {
+        font-size: 34px;
+
+        letter-spacing: 2px;
+    }
+
+
+    #top p {
+        font-size: 15px;
+    }
+
+
+    section {
+        padding: 55px 6%;
+    }
+
+
+    section h2 {
+        font-size: 30px;
+    }
+
+
+    #charm h3,
+    #feature h3 {
+        font-size: 20px;
+    }
+
+
+    #feature h3 {
+        padding: 15px 18px;
+    }
+
+
+    #philosophy h3 ~ p {
+        padding: 20px;
+    }
+
+}
