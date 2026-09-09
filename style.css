@@ -12,3 +12,266 @@
   text-align: center;
   padding: 20px;
 }
+/* =========================
+   全体
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   ヘッダー
+========================= */
+header {
+    background-color: #168342;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   ナビゲーション
+========================= */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   メイン
+========================= */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   トップ
+========================= */
+#top {
+    text-align: center;
+    padding: 90px 20px;
+}
+
+#top h2 {
+    color: #168342;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+#top p {
+    font-size: 19px;
+    color: #555555;
+}
+
+
+/* =========================
+   サイゼリヤの魅力
+========================= */
+#charm {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#charm h2 {
+    color: #168342;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+#charm p {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   3つの特徴
+========================= */
+#feature {
+    padding: 60px 0;
+}
+
+#feature > h2 {
+    text-align: center;
+    color: #168342;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+
+/* 特徴カード */
+.feature-box {
+    width: 31%;
+    display: inline-block;
+    vertical-align: top;
+
+    background-color: #f7f7f7;
+
+    padding: 30px 25px;
+    margin: 1%;
+
+    border-radius: 10px;
+
+    min-height: 250px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3 {
+    color: #168342;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.feature-box p {
+    font-size: 16px;
+}
+
+
+/* =========================
+   企業理念
+========================= */
+#philosophy {
+    background-color: #f3f8f4;
+
+    padding: 60px 40px;
+    margin: 50px 0;
+
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+#philosophy h2 {
+    color: #168342;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+#philosophy p {
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   ページリンク
+========================= */
+#links {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#links h2 {
+    color: #168342;
+    margin-bottom: 30px;
+}
+
+#links p {
+    display: inline-block;
+}
+
+
+/* ボタン */
+#links a {
+    display: inline-block;
+
+    background-color: #168342;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 25px;
+    margin: 10px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+#links a:hover {
+    background-color: #0f6331;
+}
+
+
+/* =========================
+   フッター
+========================= */
+footer {
+    background-color: #168342;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+    margin-top: 40px;
+}
+
+
+/* =========================
+   スマホ対応
+========================= */
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #top {
+        padding: 60px 15px;
+    }
+
+    #top h2 {
+        font-size: 30px;
+    }
+
+    .feature-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #philosophy {
+        padding: 40px 20px;
+    }
+}
