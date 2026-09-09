@@ -2,15 +2,9 @@
 .menue {
     text-align: center;
 }
-.table {
-  margin: 0 auto;
-  width: auto;
-  border-collapse: collapse;
-}
-
-.m-th {
-  text-align: center;
-  padding: 20px;
+.m-td {
+  width: 60px;
+  height: 60px;
 }
 /* =========================
    全体
