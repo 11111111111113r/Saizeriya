@@ -1,0 +1,14 @@
+
+.menue {
+    text-align: center;
+}
+.table {
+  margin: 0 auto;
+  width: auto;
+  border-collapse: collapse;
+}
+
+.m-th {
+  text-align: center;
+  padding: 20px;
+}
