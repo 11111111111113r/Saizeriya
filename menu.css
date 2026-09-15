@@ -1,0 +1,78 @@
+.menu {
+    text-align: center;
+
+     background: linear-gradient(180deg, rgb(255, 0, 0) 0%, #076ad9 40%, #ff3bef 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.m-td {
+    text-align: center;
+}
+img {
+    width: 500px;
+}
+.drink {
+    width: 280px;
+}
+.pz {
+    width: 380px;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.egg {
+  position: fixed; /* これで画像が「浮き」、他の要素を押し出さなくなります */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;      /* 他の画像や文字の「裏」に回します */
+}
+/* =========================
+   ヘッダー
+========================= */
+header {
+    background-color: #006837;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    border-bottom: 6px solid #c8102e;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   ナビゲーション
+========================= */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #c8102e;
+}
