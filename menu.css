@@ -22,6 +22,15 @@ table {
   margin-right: auto;
   width: 100%;
 }
+.egg {
+  position: fixed; /* これで画像が「浮き」、他の要素を押し出さなくなります */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;      /* 他の画像や文字の「裏」に回します */
+}
 /* =========================
    ヘッダー
 ========================= */
